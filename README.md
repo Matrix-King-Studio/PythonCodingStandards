@@ -111,7 +111,7 @@ if __name__ == "__main__":
 
 运行下面的命令：
 ```
-> pylint main_pylint.py
+> pylint main.py
 ************* Module main
 main.py:1:0: C0114: Missing module docstring (missing-module-docstring)
 main.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)
@@ -122,7 +122,7 @@ Your code has been rated at 5.00/10
 
 例如这里说我们的 main() 函数没有写函数文档，我们给它加上函数文档之后，再运行 PyLint 命令：
 ```
-> pylint main_pylint.py
+> pylint main.py
 ************* Module main
 main.py:1:0: C0114: Missing module docstring (missing-module-docstring)
 
@@ -204,6 +204,8 @@ git-pylint-commit-hook 有几个参数可以配置：
 - [find_pylintrc removed in 3.0 #9105](https://github.com/pylint-dev/pylint/issues/9105)
 - [Docs » Welcome to git-pylint-commit-hook’s documentation!](https://git-pylint-commit-hook.readthedocs.io/en/latest/)
 - [好好学Git：Git pre-commit 代码质量检查](https://www.voidking.com/dev-git-pre-commit/)
-- []()
 - [如何维护更新日志](https://keepachangelog.com/zh-CN/1.1.0/)
+- [约定式提交 1.0.0-beta.4](https://www.conventionalcommits.org/zh-hans/v1.0.0-beta.4/)
+- [git commit 提交规范](https://github.com/woai3c/Front-end-articles/blob/master/git%20commit%20style.md)
+- [Git Commit Message 规范](https://konglingfei.com/onex/convention/commit.html)
 - []()
