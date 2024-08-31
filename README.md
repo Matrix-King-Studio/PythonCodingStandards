@@ -198,7 +198,11 @@ git-pylint-commit-hook 有几个参数可以配置：
 
 # 4. 测试
 
+Coverage 可以测试代码覆盖率。
 
+# 5. Github Actions
+
+多平台多版本测试。
 
 # 参考资料
 
