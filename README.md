@@ -196,6 +196,10 @@ git-pylint-commit-hook 有几个参数可以配置：
 --version            打印当前版本号
 ```
 
+# 4. 测试
+
+
+
 # 参考资料
 
 - [pylint+pre-commit+commit-msg](https://blog.csdn.net/zang_debby/article/details/126830304)
