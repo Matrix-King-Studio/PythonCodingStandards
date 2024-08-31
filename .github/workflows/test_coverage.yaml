@@ -30,3 +30,4 @@ jobs:
         run: |
           coverage run main_test.py
           coverage report
+          coverage html

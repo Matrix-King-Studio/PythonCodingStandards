@@ -204,6 +204,8 @@ Coverage 可以测试代码覆盖率。
 
 多平台多版本测试。
 
+自动部署。
+
 # 参考资料
 
 - [pylint+pre-commit+commit-msg](https://blog.csdn.net/zang_debby/article/details/126830304)
