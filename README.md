@@ -134,6 +134,41 @@ Your code has been rated at 7.50/10 (previous run: 5.00/10, +2.50)
 
 ## pre-commit
 
+创建 pre-commit 框架配置文件 .pre-commit-config.yaml：
+```yaml
+default_stages: [ commit ]
+
+# Install
+# 1. pip install pre-commit
+# 2. pre-commit install(the first time you download the repo, it will be cached for future use)
+repos:
+  - repo: https://github.com/pycqa/isort
+    rev: 5.11.5
+    hooks:
+      - id: isort
+        args: [ '--profile', 'black' ]
+        exclude: >-
+          (?x)^(
+          .*__init__\.py$
+          )
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    # Ruff version.
+    rev: v0.6.2
+    hooks:
+      # Run the linter.
+      - id: ruff
+        args: [ --fix ]
+      # Run the formatter.
+      - id: ruff-format
+
+  - repo: https://github.com/psf/black
+    rev: 23.3.0
+    hooks:
+      - id: black
+        args: [ '--line-length', '120' ]
+```
+
 ## git-pylint-commit-hook
 
 在`.git/hooks`文件夹下创建`pre-commit`文件，并填入如下内容：
