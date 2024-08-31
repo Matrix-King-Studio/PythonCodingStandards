@@ -111,7 +111,7 @@ if __name__ == "__main__":
 
 运行下面的命令：
 ```
-> pylint main.py
+> pylint main_pylint.py
 ************* Module main
 main.py:1:0: C0114: Missing module docstring (missing-module-docstring)
 main.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)
@@ -122,7 +122,7 @@ Your code has been rated at 5.00/10
 
 例如这里说我们的 main() 函数没有写函数文档，我们给它加上函数文档之后，再运行 PyLint 命令：
 ```
-> pylint main.py
+> pylint main_pylint.py
 ************* Module main
 main.py:1:0: C0114: Missing module docstring (missing-module-docstring)
 
@@ -134,7 +134,12 @@ Your code has been rated at 7.50/10 (previous run: 5.00/10, +2.50)
 
 ## pre-commit
 
+pre-commit 框架是一个支持多语言的 pre-commit 脚本的管理器，能够简化我们的 pre-commit 脚本配置。
+
+使用 pre-commit 框架时，在 .pre-commit-config.yaml 配置文件指定所需的linter列表（脚本列表），然后 pre-commit 框架会自动下载这些linter并运行。
+
 创建 pre-commit 框架配置文件 .pre-commit-config.yaml：
+
 ```yaml
 default_stages: [ commit ]
 
@@ -167,6 +172,12 @@ repos:
     hooks:
       - id: black
         args: [ '--line-length', '120' ]
+```
+
+运行pre-commit框架:
+
+```shell
+pre-commit run --all-files
 ```
 
 ## git-pylint-commit-hook
