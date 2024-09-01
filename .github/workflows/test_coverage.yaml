@@ -6,7 +6,6 @@ on:
 
 jobs:
   test_coverage:
-
     strategy:
       fail-fast: true
       matrix:

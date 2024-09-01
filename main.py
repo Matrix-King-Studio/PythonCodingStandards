@@ -1,3 +1,10 @@
+"""
+主函数入口
+"""
+
+import unicodedata
+
+
 def is_number(s):
     try:
         float(s)
@@ -6,8 +13,6 @@ def is_number(s):
         pass
 
     try:
-        import unicodedata
-
         unicodedata.numeric(s)
         return True
     except (TypeError, ValueError):
@@ -17,7 +22,9 @@ def is_number(s):
 
 
 def main():
-    print("Hello, World!")
+    print(
+        "Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!"
+    )
     print()
 
 
